@@ -1,0 +1,9 @@
+project: savantenvs/Sandboxie
+target: get_arguments
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/get_arguments/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/getargs_fuzz
+    libfuzzer: true
+    timeout: 10

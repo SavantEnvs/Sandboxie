@@ -1,0 +1,9 @@
+project: savantenvs/Sandboxie
+target: tag_values
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tag_values/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/tags_fuzz
+    libfuzzer: true
+    timeout: 10

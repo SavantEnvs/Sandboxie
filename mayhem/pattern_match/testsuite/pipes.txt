@@ -1,0 +1,3 @@
+*\__hex*.dat
+\??\pipe\*
+\??\pipe\abc

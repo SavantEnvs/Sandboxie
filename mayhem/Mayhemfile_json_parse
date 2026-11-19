@@ -1,0 +1,9 @@
+project: savantenvs/Sandboxie
+target: json_parse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/json_parse/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/json_fuzz
+    libfuzzer: true
+    timeout: 10

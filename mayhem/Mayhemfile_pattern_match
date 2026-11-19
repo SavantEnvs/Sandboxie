@@ -1,0 +1,9 @@
+project: savantenvs/Sandboxie
+target: pattern_match
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pattern_match/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/pattern_fuzz
+    libfuzzer: true
+    timeout: 10
